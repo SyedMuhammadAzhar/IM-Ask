@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:background="@drawable/bg">
+
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/search_app_bar"
+        ></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_bar_display"
+        android:layout_below="@id/search_app_bar"
+        android:layout_marginTop="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH FOR USERS"
+            android:id="@+id/SearchText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:gravity="center"
+            />
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Search here"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/SearchText"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/input"
+            android:ems="10"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="6dp"/>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/search_box"
+            android:layout_below="@+id/SearchText"
+            android:layout_toEndOf="@id/search_box"
+            android:background="@drawable/search"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+             />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar_display"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input"
+        >
+
+
+
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+</RelativeLayout>

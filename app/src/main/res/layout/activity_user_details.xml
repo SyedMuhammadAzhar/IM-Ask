@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/input_group">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/CI_Dp_UD"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/colorPrimaryDark"
+            android:onClick="SelectImage"
+
+            app:civ_border_width="2dp" />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/input_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/ET_Name_UD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_middle"
+            android:hint="Name"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+
+
+        <EditText
+            android:id="@+id/ET_Email_UD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_middle"
+            android:hint="Email"
+            android:inputType="text"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/ET_Course_UD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_middle"
+            android:hint="Semester"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_UD"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/Btn_Save_Information_UD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="SaveInformation"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="#FE5295"
+            android:textSize="17sp"
+            />
+
+
+
+    </LinearLayout>
+</RelativeLayout>

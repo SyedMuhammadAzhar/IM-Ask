@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Commentsection"
+    android:background="@drawable/bg">
+
+
+    <TextView
+        android:id="@+id/commentsection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorAccent"
+        android:text="                        COMMENTS"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/commentsection"
+        android:layout_above="@id/commentsection_dp"
+        >
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="0dp"
+        android:id="@+id/rv_commentsection"
+        />
+    </RelativeLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/commentsection_dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/profile" />
+
+    <EditText
+        android:id="@+id/commentsection_query"
+        android:layout_width="214dp"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="33dp"
+        android:layout_toRightOf="@+id/commentsection_dp"
+        android:background="@drawable/input"
+        android:hint="Comment..."
+        android:inputType="textMultiLine"
+        android:paddingLeft="15dp"
+
+        android:paddingTop="15dp"
+        android:paddingRight="5dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/commentsection_publish_comment"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="13dp"
+        android:layout_toRightOf="@+id/commentsection_query"
+        android:background="@drawable/input"
+        android:src="@drawable/postit" />
+
+
+</RelativeLayout>
